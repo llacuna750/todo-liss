@@ -8,12 +8,12 @@ function App() {
     return localStorage.getItem("darkMode") === "true";
   });
 
-  //for local
-  // useEffect(() => {
-  //   localStorage.setItem("darkMode", darkMode);
-  //   document.body.style.backgroundColor = darkMode ? "#121212" : "#ffffff";
-  //   document.body.style.color = darkMode ? "#ffffff" : "#000000";
-  // }, [darkMode]);
+  // for local
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode);
+    document.body.style.backgroundColor = darkMode ? "#121212" : "#ffffff";
+    document.body.style.color = darkMode ? "#ffffff" : "#000000";
+  }, [darkMode]);
 
   // useEffect(() => {
   //   fetch("http://localhost:5000/tasks")
