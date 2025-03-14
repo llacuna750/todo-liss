@@ -3,12 +3,8 @@ const mysql = require("mysql2");
 const cors = require("cors");
 require("dotenv").config();
 
-const cors = require("cors");
-app.use(cors({ 
-  origin: ["//https://llacuna750.github.io/todo-liss", "todo-liss-production.up.railway.app"],
-  methods: ["GET", "POST", "PUT", "DELETE"], // Allow only necessary methods
-  credentials: true 
-}));
+
+app.use(cors({ origin: "*" })); // Allow all origins (for testing)
 
 const app = express();
 app.use(cors());
