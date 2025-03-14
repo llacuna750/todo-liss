@@ -8,8 +8,8 @@ function App() {
     return localStorage.getItem("darkMode") === "true";
   });
 
-  // const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
-  const BACKEND_URL = "frontend-in-gh-pages-production.up.railway.app"; // Use Railway backend
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+  // const BACKEND_URL = "frontend-in-gh-pages-production.up.railway.app"; // Use Railway backend
 
   useEffect(() => {
     localStorage.setItem("darkMode", darkMode);
