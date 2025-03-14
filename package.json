@@ -3,10 +3,8 @@
   "name": "todo-liss",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://llacuna750.github.io/todo-liss/",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "start": "node server.js",
     "dev": "vite",
     "build": "vite build",

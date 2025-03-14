@@ -26,7 +26,7 @@ db.connect((err) => {
 
 // Routes
 app.get("/", (req, res) => {
-  res.send("API is running...");
+  res.send("API is running... Nice..");
 });
 
 // Get all tasks
@@ -56,4 +56,4 @@ app.delete("/tasks/:id", (req, res) => {
 });
 
 // Start server
-app.listen(6000, () => console.log("Server running on port 6000"));
+app.listen(5000, () => console.log("Server running on port 5000"));
