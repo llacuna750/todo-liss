@@ -8,14 +8,38 @@ function App() {
     return localStorage.getItem("darkMode") === "true";
   });
 
+  //for local
+  // useEffect(() => {
+  //   localStorage.setItem("darkMode", darkMode);
+  //   document.body.style.backgroundColor = darkMode ? "#121212" : "#ffffff";
+  //   document.body.style.color = darkMode ? "#ffffff" : "#000000";
+  // }, [darkMode]);
+
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/tasks")
+  //     .then((res) => res.json())
+  //     .then((data) => setTasks(data));
+  // }, []);
+
+  // const addTask = () => {
+  //   fetch("http://localhost:5000/tasks", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({ title: newTask }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((task) => setTasks([...tasks, task]));
+  // };
+
+  // const deleteTask = (id) => {
+  //   fetch(`http://localhost:5000/tasks/${id}`, { method: "DELETE" })
+  //     .then(() => setTasks(tasks.filter((task) => task.id !== id)));
+  // };
+
+  //for fullstack open in VERCEL
+
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   // const BACKEND_URL = "frontend-in-gh-pages-production.up.railway.app"; // Use Railway backend
-
-  useEffect(() => {
-    localStorage.setItem("darkMode", darkMode);
-    document.body.style.backgroundColor = darkMode ? "#121212" : "#ffffff";
-    document.body.style.color = darkMode ? "#ffffff" : "#000000";
-  }, [darkMode]);
 
   useEffect(() => {
     fetch(`${BACKEND_URL}/tasks`)
